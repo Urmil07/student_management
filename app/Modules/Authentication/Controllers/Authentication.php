@@ -27,7 +27,7 @@ class Authentication extends BaseController
     {
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-        $filter = array('email' => $email);
+        $filter = array('email' => $email, 'is_deleted' => '0');
         $user = $this->CommonModel->get_single('students', $filter);
 
         if (is_null($user)) {

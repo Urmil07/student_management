@@ -28,7 +28,9 @@ class Teacher_Dashboard extends BaseController
         $data['main_modules'] = "Teacher_Dashboard";
         $data['main_page'] = "Teacher_Dashboard";
 
-        $data['students'] = $this->CommonModel->get_all_data('students');
+
+        $filter = array("is_deleted" => '0');
+        $data['students'] = $this->CommonModel->get_by_condition($this->table, $filter);
         echo view('Dashboard/template', $data);
     }
 
@@ -54,6 +56,14 @@ class Teacher_Dashboard extends BaseController
 
                     $file_destination = 'uploads/students/' . $file_name;
                     move_uploaded_file($file_path, $file_destination);
+                }
+
+                if (!empty($data['password'])) {
+                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+                } else {
+                    $filter = array("id" => $update_id);
+                    $query = $this->CommonModel->get_single($this->table, $filter);
+                    $data['password'] = $query->password;
                 }
 
                 $update = $this->CommonModel->common_update_data($this->table, $update_id, $data);

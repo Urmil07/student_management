@@ -29,14 +29,6 @@
                                 <button class="btn btn-block btn-lg btn-info" type="submit">Log In</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                <div class="social">
-                                    <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="" data-original-title="Login with Facebook"> <i aria-hidden="true" class="fab  fa-facebook"></i> </a>
-                                    <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="" data-original-title="Login with Google"> <i aria-hidden="true" class="fab  fa-google-plus"></i> </a>
-                                </div>
-                            </div>
-                        </div>
                         <div class="form-group m-b-0 m-t-10">
                             <div class="col-sm-12 text-center">
                                 If You'r Teacher <a href="<?= base_url('authentication_teacher') ?>" class="text-info m-l-5"><b>Sign In</b></a> or <a href="<?= base_url('authentication_teacher/register') ?>" class="text-info m-l-5"><b>Sign Up</b></a>
