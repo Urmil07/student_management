@@ -1,102 +1,58 @@
 # CodeIgniter 4 Student Management
 
-[![Build Status](https://github.com/codeigniter4/CodeIgniter4/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions?query=workflow%3A%22PHPUnit%22)
-[![Coverage Status](https://coveralls.io/repos/github/codeigniter4/CodeIgniter4/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4/CodeIgniter4?branch=develop)
-[![Downloads](https://poser.pugx.org/codeigniter4/framework/downloads)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/codeigniter4/CodeIgniter4)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub stars](https://img.shields.io/github/stars/codeigniter4/CodeIgniter4)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub license](https://img.shields.io/github/license/codeigniter4/CodeIgniter4)](https://github.com/codeigniter4/CodeIgniter4/blob/develop/LICENSE)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/codeigniter4/CodeIgniter4/pulls)
-<br>
+This Project is about Teacher Sign In and Sign Up Who can register student by adding new student from the 'http://localhost/student_management/teacher_dashboard'.
+Techer can Create Student, can Read Student Details, can Update Student Details, can Delete Student.
+Student can Read Details, can Update Details.
 
-## What is CodeIgniter?
+let's start our project
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+- Sign In And Sign UP Pages
 
-This repository holds the source code for CodeIgniter 4 only.
-Version 4 is a complete rewrite to bring the quality and the code into a more modern version,
-while still keeping as many of the things intact that has made people love the framework over the years.
+1. 'http://localhost/student_management/' By heating this url you be able to see Student Sign In Page, Where you can Sign In using your Sign In Credential Email and       Password.
+2. Down below you can see 'If You'r Teacher Sign In or Sign Up'.
+3. Click on Sign In To Sign In into Teacher dashboard.
+4. Click on Sign Up to Create new Sign In Credential.
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+- Student Sign In
+  1.You Have To Give Correct Student Email And Password To Login
+  
+  -Demo Credential
+   Email : genelia@gmail.com
+   password : admin
 
-### Documentation
+- After Student Sign In
+1. After Student Sign In You Will Redirect To The 'http://localhost/student_management/student_dashboard' (Student Dashboard).
+2. Over Here You Can Find Student Details.
+3. Click On Profile Button On Top Right
+    There Are Two Options
+    1. 'Edit My Profile'  Where You Can Edit Your Profile Details
+    2. 'Logout'  Ypu Will Logged Out By Clicking On This Button And Redirect To The Student Login Page
 
-The [User Guide](https://codeigniter4.github.io/userguide/) is the primary documentation for CodeIgniter 4.
+- Teacher Sign Up
+ 1. Here You Have To Give Details About Teacher And Click On Register.
+ 2. After Clickin Register Button You Will Redirect To The Teacher Sign In Page.
 
-The current **in-progress** User Guide can be found [here](https://codeigniter4.github.io/CodeIgniter4/).
-As with the rest of the framework, it is a work in progress, and will see changes over time to structure, explanations, etc.
-
-You might also be interested in the [API documentation](https://codeigniter4.github.io/api/) for the framework components.
-
-## Important Change with index.php
-
-index.php is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-CodeIgniter is developed completely on a volunteer basis. As such, please give up to 7 days
-for your issues to be reviewed. If you haven't heard from one of the team in that time period,
-feel free to leave a comment on the issue so that it gets brought back to our attention.
-
-We use GitHub issues to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-If you raise an issue here that pertains to support or a feature request, it will
-be closed! If you are not sure if you have found a bug, raise a thread on the forum first -
-someone else may have encountered the same thing.
-
-Before raising a new GitHub issue, please check that your bug hasn't already
-been reported or fixed.
-
-We use pull requests (PRs) for CONTRIBUTIONS to the repository.
-We are looking for contributions that address one of the reported bugs or
-approved work packages.
-
-Do not use a PR as a form of feature request.
-Unsolicited contributions will only be considered if they fit nicely
-into the framework roadmap.
-Remember that some components that were part of CodeIgniter 3 are being moved
-to optional packages, with their own repository.
-
-## Contributing
-
-We **are** accepting contributions from the community! It doesn't matter whether you can code, write documentation, or help find bugs, 
-all contributions are welcome. 
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/README.md).
-
-CodeIgniter has had thousands on contributions from people since its creation. This project would not be what it is without them. 
-
-<a href="https://github.com/codeigniter4/CodeIgniter4/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=codeigniter4/CodeIgniter4" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
+- Teacher Sign In 
+ 1.You Have To Give Correct Teacher Email And Password To Login
+  
+  -Demo Credential
+   Email : admin@gmail.com
+   password : admin
+   
+- After Teacher Sign In
+ 1. After Student Sign In You Will Redirect To The 'http://localhost/student_management/teacher_dashboard' (Teacher Dashboard).
+ 2. Over Here You Can See All The Register Student Details In Table.
+ 3. By Clicking On There Name Or Image You Can Go To Edit Student Page.
+ 4. By Clicking On The Delete Button You Can Delete Student (After Delete Student Will Not Show In Table But Student Details Still Can Be Found In Student Databse        Table).
+ 5. By Clicking On Add New Student You Can Create/Register New Student.
+ 6. By Clicking On Profile Button On Top Right.
+     -There Are Three Options
+        1. 'My Profile'  Where You Can Find Your Profile Details.
+        2. 'Edit My Profile'  Where You Can Edit Your Profile Details.
+        3. 'Logout'  Ypu Will Logged Out By Clicking On This Button And Redirect To The Teacher Login Page.
 
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- xml (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-
-## Running CodeIgniter Tests
-
-Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+- Session management
+ 1. When You Sign Up As Student You Can Not Got To Student Or Teacher Login Register Page.
+ 2. When You Are Signed Up Already As Student You Can Not Sign In As Teacher Or Can't Access Any Teacher Dashboard Related Page At Same Time In Same Browser.
+ 3. When You Are Signed Up Already As Teacher You Can Not Sign In As Student Or Can't Access Any Student Dashboard Related Page At Same Time In Same Browser.
