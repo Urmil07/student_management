@@ -23,6 +23,10 @@ class Teacher_Dashboard extends BaseController
 
     public function index()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         $data['page_headline'] = "Teacher Dashboard";
         $data['page_title'] = "Teacher Dashboard";
         $data['main_modules'] = "Teacher_Dashboard";
@@ -37,6 +41,10 @@ class Teacher_Dashboard extends BaseController
     // Create And Update Function
     public function create()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         $update_id = $this->request->uri->getSegment(3);
         $submit = $this->request->getVar('submit');
 
@@ -167,6 +175,10 @@ class Teacher_Dashboard extends BaseController
 
     public function delete()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         $id = $this->request->uri->getSegment(3);
         $update_data = array(
             "is_deleted"    => 1,

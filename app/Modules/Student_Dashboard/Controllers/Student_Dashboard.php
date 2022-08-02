@@ -23,6 +23,11 @@ class Student_Dashboard extends BaseController
 
     public function index()
     {
+        $SessionCheck = session()->get('TeacherSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('teacher_dashboard'));
+        }
+
         $data['page_headline'] = "Student Dashboard";
         $data['page_title'] = "Student Dashboard";
         $data['main_modules'] = "Student_Dashboard";
@@ -36,6 +41,11 @@ class Student_Dashboard extends BaseController
 
     public function create()
     {
+        $SessionCheck = session()->get('TeacherSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('teacher_dashboard'));
+        }
+        
         $user  = session()->StudentSession;
         $id = $user['id'];
         $submit = $this->request->getVar('submit');

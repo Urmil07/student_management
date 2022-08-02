@@ -30,18 +30,18 @@ use App\Models\CommonModel;
                             <input type="text" name="age" id="age" class="form-control" value="<?= $age ?>">
                         </div>
                         <div class="form-group col-md-12">
-                            <label>Standard</label>
-                            <input type="text" name="standard" id="standard" class="form-control" value="<?= $standard ?>">
-                        </div>
-                        <div class="form-group col-md-12">
                             <label>Address</label>
                             <textarea name="address" id="address" rows="15" class="ckeditor" placeholder="Address Here...">
                                             <?= $address ?>
                                         </textarea>
                         </div>
                         <div class="form-group col-md-12">
+                            <label>Standard</label>
+                            <input type="text" name="standard" id="standard" class="form-control" value="<?= $standard ?>" readonly>
+                        </div>
+                        <div class="form-group col-md-12">
                             <label>Grades</label>
-                            <input class="form-control" type="text" id="grades" name="grades" value="<?= $grades ?>">
+                            <input class="form-control" type="text" id="grades" name="grades" value="<?= $grades ?>" readonly>
                         </div>
                         <div class="form-group col-md-12">
                             <label>Password</label>
@@ -69,7 +69,7 @@ use App\Models\CommonModel;
                         <div class="form-actions">
                             <div class="card-body">
                                 <button type="submit" name="submit" value="Submit" class="btn btn-success submit"> <i class="fa fa-check"></i> Save</button>
-                                <a href="<?= base_url('teacher_dashboard') ?>" class="btn btn-dark">Cancel</a>
+                                <a href="<?= base_url('student_dashboard') ?>" class="btn btn-dark">Cancel</a>
                             </div>
                         </div>
                     </form>

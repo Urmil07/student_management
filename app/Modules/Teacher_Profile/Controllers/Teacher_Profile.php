@@ -23,6 +23,10 @@ class Teacher_Profile extends BaseController
 
     public function index()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         $data['page_headline'] = "Teacher Profile";
         $data['page_title'] = "Teacher Profile";
         $data['main_modules'] = "Teacher_Profile";
@@ -38,6 +42,10 @@ class Teacher_Profile extends BaseController
 
     public function create()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         $user  = session()->TeacherSession;
         $id = $user['id'];
         $submit = $this->request->getVar('submit');

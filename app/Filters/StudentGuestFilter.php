@@ -25,8 +25,7 @@ class StudentGuestFilter implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (session()->get('StudentSession'))
-        {
+        if (session()->get('StudentSession')) {
             return redirect()->to(base_url('student_dashboard'));
         }
     }

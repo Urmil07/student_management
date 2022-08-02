@@ -19,6 +19,11 @@ class Authentication_Teacher extends BaseController
 
     public function index()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
+
         $data['main_modules'] = 'Authentication_Teacher';
         $data['main_page'] = 'Authentication_teacher_login';
 
@@ -27,6 +32,10 @@ class Authentication_Teacher extends BaseController
 
     public function authenticate()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
         $teachers = $this->Authentication_Teacher_Model->where('email', $email)->first();
@@ -61,6 +70,10 @@ class Authentication_Teacher extends BaseController
 
     public function register()
     {
+        $SessionCheck = session()->get('StudentSession');
+        if (!empty($SessionCheck)) {
+            return redirect()->to(base_url('student_dashboard'));
+        }
         helper(['form', 'url']);
 
         $submit = $this->request->getVar('submit');

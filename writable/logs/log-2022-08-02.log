@@ -1,0 +1,14 @@
+CRITICAL - 2022-08-02 15:44:14 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Modules\Teacher_Dashboard\Views\Teacher_Dashboard.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('App\\Modules\\Teacher_Dashboard\\Views\\Teacher_Dashboard', [], true)
+ 4 APPPATH\Views\Dashboard\template.php(5): view('App\\Modules\\Teacher_Dashboard\\Views\\Teacher_Dashboard')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Dashboard\\template.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Dashboard/template', [], true)
+ 8 APPPATH\Modules\Teacher_Dashboard\Controllers\Teacher_Dashboard.php(34): view('Dashboard/template', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Modules\Teacher_Dashboard\Controllers\Teacher_Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Teacher_Dashboard\Controllers\Teacher_Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
